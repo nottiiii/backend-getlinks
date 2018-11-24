@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- <head>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;    
+        }
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }      
+    </style>
+</head> -->
+
+<body>
+    <div style="text-align:center;">
+        <input id="search" type="text" name="fname">
+        <button>Submit</button>
+        <h1> Users does not exist, please try again!</h1>
+    </div>
+    <!-- <input id="search" type="text" name="fname">
+    <button>Submit</button>
+    <h1> Users does not exist, please try again!</h1> -->
+</body>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+  document.body.addEventListener("click", event => {
+    if (event.target.nodeName == "BUTTON") {
+      location.replace(`http://localhost:3000/follower/${document.getElementById('search').value}`)
+    }
+  });
+</script>
+</html>
